@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Widmanformel</title>
+</head>
+
+<body>
+    <h1>Widmanformel</h1>
+    <form action="widmanformel.php" method="post">
+        <label>Geschlecht
+            <select name="geschlecht">
+                <option>Weiblich</option>
+                <option>Männlich</option>
+                <option>Kind</option>
+            </select>
+        </label>
+
+        <p>Körpergewicht in kg: <input type="nubmer" min=1 max=400 name="kg"> </p>
+        <p>Volumen des Getränks: <input type="number" name="v"> </p>
+        <p>Alkoholgehalt in Prozent: <input type="number" name="p"> </p>
+        <input type="submit" value="Alkoholgehalt berechnen">
+    </form>
+</body>
+
+</html>
