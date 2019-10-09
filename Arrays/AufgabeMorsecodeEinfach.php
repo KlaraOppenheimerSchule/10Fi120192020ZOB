@@ -68,7 +68,7 @@ foreach($translate as $sign)
         //== ist nicht case-sensitive
         if($key===$sign)
         {
-            echo $sign;
+            echo $thecode[$key];
         }          
     }
 }
