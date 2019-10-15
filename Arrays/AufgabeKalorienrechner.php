@@ -48,3 +48,24 @@ echo "Summe der Kalorien:  " . array_sum($kalorien);
 echo "Durchschnittskalorien : " . array_sum($kalorien) / count($kalorien);
 
 #Aufgabe f
+//inizialisieren der Werte
+$aktuellHoechsterWert = 0;
+$aktuellerIndex = 0;
+$indexVomHoechstenWert = 0;
+//foreach schleife die durch das array kalorien durchiteriert
+foreach ($kalorien as $kalorie) {
+    //nur wenn key groesser als der aktuell hoechste wert ist dann setze ihn als den hoechsten wert und notiere seinen Index
+    if ($kalorie > $aktuellHoechsterWert) {
+        $aktuellHoechsterWert = $kalorie;
+        $indexVomHoechstenWert = $aktuellerIndex;
+    }        
+    //zaehle nach jeder iteration den index hoch
+    $aktuellerIndex++;
+}
+echo $nahrungsmittel[$indexVomHoechstenWert] . "<br>";
+
+
+//max() sucht den groessten wert im array und gibt ihn zurueck
+//array search nimmt einen Wert und sucht ihn im angegebenen array ==> gibt einen index zurueck
+
+echo $nahrungsmittel[array_search(max($kalorien), $kalorien)];
